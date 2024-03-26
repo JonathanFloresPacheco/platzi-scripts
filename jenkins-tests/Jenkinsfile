@@ -1,13 +1,13 @@
 pipeline {
-  agent any
+  agent any //Es Una instancia de jenkis
   tools {
-    nodejs 'node-11.0.0'
+    nodejs 'node-11.1.0' 
   }
-
+// Cuanto tiempo debe correr nuestro job
   options {
     timeout(time: 2, unit: 'MINUTES')
   }
-
+// Son los pasos donde va ejecutar mi codigo
   stages {
     stage('Install dependencies') {
       steps {
